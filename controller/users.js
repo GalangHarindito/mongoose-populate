@@ -32,7 +32,7 @@ module.exports = {
             });
           }
         })
-        .populate("addresses", "address -_id")
+        .populate("addresses")
       },  
   postUser: (req, res) => {
     const newUser = new user(req.body);
