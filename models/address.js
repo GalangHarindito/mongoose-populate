@@ -7,10 +7,6 @@ var addressSchema = new Schema(
       city: { type: String, required: true },
       country: { type: String, required: true },
       postalCode: { type: Number, required: true } 
-
-  },
-  {
-    timestamps: true
   }
 );
 
