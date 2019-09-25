@@ -4,10 +4,13 @@ const User = require("../models/users");
 module.exports = {
   addAddress: async (req, res) => {
     const address = await Address.create({
-        address : req.body.address,
-        city: req.body.city,
-        country: req.body.country,
-        postalCode: req.body.postalCode
+        address :
+        { 
+            address : req.body.address,
+            city: req.body.city,
+            country: req.body.country,
+            postalCode: req.body.postalCode
+        }  
     });
     const user = await User.findOneAndUpdate(
       { _id: req.body._id },
